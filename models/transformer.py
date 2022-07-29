@@ -345,13 +345,6 @@ def deit_tiny_patch16_224(pretrained=None, **kwargs):
     model = VisionTransformer(
         patch_size=16, embed_dim=192, depth=12, num_heads=3, mlp_ratio=4, qkv_bias=True,
         norm_layer=partial(nn.LayerNorm, eps=1e-6), name="tiny", **kwargs)
-    # kernel_list = [4, 6, 6, 7, 8]
-    # stride_list = [1, 1, 1, 1, 1]
-    # head_list = [3, 3, 4, 4, 6]
-    # encoder = EncodingModule(initial_dim=3, img_size=700, patch_size=16, patched_dim=192,  # post_drop=0.1,
-    #                          kernel_list=kernel_list, norm_eps=1e-6, stride_list=stride_list, head_list=head_list,
-    #                          # size_reduce=True
-    #                          )
     if pretrained:
         # checkpoint = torch.hub.load_state_dict_from_url(
         #     url="https://dl.fbaipublicfiles.com/deit/deit_tiny_patch16_224-a1311bcf.pth",
@@ -368,13 +361,6 @@ def deit_small_patch16_224(pretrained=None, **kwargs):
     model = VisionTransformer(
         patch_size=16, embed_dim=384, depth=12, num_heads=6, mlp_ratio=4, qkv_bias=True,
         norm_layer=partial(nn.LayerNorm, eps=1e-6), name="small", **kwargs)
-    # kernel_list = [4, 6, 6, 7, 8]
-    # stride_list = [1, 1, 1, 1, 1]
-    # head_list = [3, 4, 4, 6, 6]
-    # encoder = EncodingModule(initial_dim=3, img_size=700, patch_size=16, patched_dim=384,  # post_drop=0.1,
-    #                          kernel_list=kernel_list, norm_eps=1e-6, stride_list=stride_list, head_list=head_list,
-    #                          # size_reduce=True
-    #                          )
     if pretrained:
         # checkpoint = torch.hub.load_state_dict_from_url(
         #     url="https://dl.fbaipublicfiles.com/deit/deit_small_patch16_224-cd65a155.pth",
@@ -391,13 +377,6 @@ def deit_base_patch16_224(pretrained=None, **kwargs):
     model = VisionTransformer(
         patch_size=16, embed_dim=768, depth=12, num_heads=12, mlp_ratio=4, qkv_bias=True,
         norm_layer=partial(nn.LayerNorm, eps=1e-6), name="base", **kwargs)
-    # kernel_list = [4, 6, 6, 7, 8]
-    # stride_list = [1, 1, 1, 1, 1]
-    # head_list = [3, 4, 6, 6, 6]
-    # encoder = EncodingModule(initial_dim=3, img_size=700, patch_size=16, patched_dim=768, post_drop=0.1,
-    #                          kernel_list=kernel_list, norm_eps=1e-6, stride_list=stride_list, head_list=head_list,
-    #                          # size_reduce=True
-    #                          )
     if pretrained:
         # checkpoint = torch.hub.load_state_dict_from_url(
         #     url="https://dl.fbaipublicfiles.com/deit/deit_base_patch16_224-b5f2ef4d.pth",
