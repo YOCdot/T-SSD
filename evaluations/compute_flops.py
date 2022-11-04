@@ -91,6 +91,7 @@ if __name__ == '__main__':
     model_dict = {
         "detr-r34": build_detr(backbone="resnet34"),
         "detr-r101": build_detr(backbone="resnet101"),
+        "detr-r152": build_detr(backbone="resnet152"),
         "ssd-300": build_ssd300(backbone="resnet50"),
         "t-ssd-tiny": build_tssd(model_name="tiny"),
         "t-ssd-small": build_tssd(model_name="small"),
